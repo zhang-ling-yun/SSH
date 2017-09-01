@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	
+    <package name="ssh" extends="struts-default" namespace="/">
+    	<!-- Action自身管理类:Struts2和Spring整合的方法一 -->
+    	<!-- <action name="product_*" class="cn.gdedu.ssh.action.ProductAction" method="{1}"></action> -->
+    	
+    	<!-- 交给Spring管理，能够实现AOP处理，建议使用第二种方式:就是class中使用Spring中的id名称即可-->
+    	<action name="product_*" class="productAction" method="{1}"></action>
+    
+    </package>
+
+</struts>
